@@ -3,7 +3,7 @@ package fantasy;
 import org.junit.Test;
 import static org.junit.Assert.assertThrows;
 
-/** Active stub invocation tests; business behavior is not implemented yet. */
+/** tests; behavior is not implemented yet. */
 public class FantasyDraftTest {
     @Test
     public void parseCommandStubIsInvoked() {
