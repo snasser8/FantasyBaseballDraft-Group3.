@@ -1,0 +1,35 @@
+First Burndown is https://docs.google.com/spreadsheets/d/1rBK25FKfF8457e3FpxJTjFiR8StWXQDGZ75ayG1NWF8/edit?gid=1060632366#gid=1060632366
+Features document URL: https://docs.google.com/document/d/1b39TDXpGVR0usgtvJ6R5spz4a-E9GDn-mUNotW6qSCk/edit?tab=t.0
+
+Fantasy Baseball Draft Aide - Group 3
+Team: Sarah, Harrison, Joseph (three people).
+Planned semester features, based on the feature document and project workbook:
+
+1. List MLB teams.
+2. List players on a selected MLB team.
+3. Search for a player by name.
+4. Load MLB batting and pitching data into the database.
+5. View each fantasy team roster.
+6. Record a draft pick for the program user.
+7. Record other teams draft picks.
+8. Prevent duplicate draft picks.
+9. View a player batting statistics.
+10. View a player pitching statistics.
+11. Rank available, undrafted non-pitchers (OVERALL).
+12. Rank available, undrafted pitchers (POVERALL).
+13. Print/update current draft state.
+14. Sort players by overall score.
+15. Configure/use a batting evaluation function (EVALFUN); the preliminary design names AVG/BA as the default criterion.
+16. Configure/use a pitching evaluation function (PEVALFUN); the preliminary design names IP as the default criterion.
+17. Update OVERALL/POVERALL scores using evaluation functions.
+18. Save current draft/database state, including serialization support.
+19. Restore saved draft state from a filename.fantasy.txt file.
+20. Show available commands and syntax (help).
+21. Quit the program.
+22. Run the text-command input loop.
+
+Design details to confirm against the full main project specification:
+- Exact IDRAFT/ODRAFT team rules conflict between the preliminary class table and workbook plan.
+- Confirm formula grammar, ranking direction, ties, roster slots, input files, command syntax, and saved-file format.
+- STARS was suggested in an earlier discussion but is not established by the supplied feature PDF; include if confirmed in the main specification.
+- Skeleton creation and JUnit work are development tasks rather than end-user features.
