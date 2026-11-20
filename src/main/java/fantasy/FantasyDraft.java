@@ -20,6 +20,8 @@ public class FantasyDraft {
     private static final Pattern TOKEN = Pattern.compile("\\G\\s*(?:\"([^\"]*)\"|([^\\s\"]+))(?=\\s|$)");
 
     private final Map<String, BigDecimal> pitchers;
+    private final Draft draft = new Draft();
+    private final List<Player> availablePlayers = new ArrayList<>();
     private final Map<String, String> draftedTeams = new LinkedHashMap<>();
     private final Map<String, Function<List<String>, String>> draftCommands = new HashMap<>();
 
@@ -29,6 +31,57 @@ public class FantasyDraft {
 
     public FantasyDraft(Map<String, BigDecimal> pitchers) {
         this.pitchers = Map.copyOf(pitchers);
+        // Register available pitchers
+        for (String playerName : pitchers.keySet()) {
+            registerAvailablePlayer(new Player("P", playerName));
+        }
+
+        // Connect Joseph's draft commands
+        registerDraftCommand("IDRAFT",
+                arguments -> handleDraftCommand(arguments, "A"));
+
+        registerDraftCommand("ODRAFT",
+                arguments -> handleDraftCommand(arguments, null));
+    }
+
+    public void registerAvailablePlayer(Player player) {
+        if (player == null || player.getName() == null
+                || player.getPosition() == null) {
+            throw new IllegalArgumentException("Invalid player.");
+        }
+
+        for (Player existing : availablePlayers) {
+            if (existing.getName().equalsIgnoreCase(player.getName())) {
+                return;
+            }
+        }
+
+        availablePlayers.add(player);
+    }
+
+    private String handleDraftCommand(List<String> arguments,
+                                      String defaultTeam) {
+        boolean isIDraft = defaultTeam != null;
+
+        if (arguments.size() != (isIDraft ? 1 : 2)) {
+            return isIDraft
+                    ? "Usage: IDRAFT \"playerName\""
+                    : "Usage: ODRAFT \"playerName\" A|B|C|D";
+        }
+
+        String teamId = isIDraft
+                ? defaultTeam
+                : arguments.get(1);
+
+        return draft.draftByName(
+                arguments.get(0),
+                teamId,
+                availablePlayers,
+                playerName -> draftedTeams.keySet().stream()
+                        .anyMatch(existing ->
+                                Draft.normalizeName(existing)
+                                        .equals(Draft.normalizeName(playerName))),
+                this::recordPick);
     }
 
     public List<String> parseCommand(String input) {
