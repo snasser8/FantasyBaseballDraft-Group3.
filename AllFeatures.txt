@@ -1,9 +1,9 @@
 First Burndown is https://docs.google.com/spreadsheets/d/1rBK25FKfF8457e3FpxJTjFiR8StWXQDGZ75ayG1NWF8/edit?gid=1060632366#gid=1060632366
 Features document URL: https://docs.google.com/document/d/1b39TDXpGVR0usgtvJ6R5spz4a-E9GDn-mUNotW6qSCk/edit?tab=t.0
 
-Fantasy Baseball Draft Aide - Group 3
+Fantasy Baseball Draft - Group 3
 
-Planned semester features:
+Planned features:
 1. List MLB teams.
 2. List players on a team.
 3. Search for a player by name.

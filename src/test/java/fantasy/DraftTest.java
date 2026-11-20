@@ -3,10 +3,9 @@ package fantasy;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-// Joseph Bean - JUnit tests
 public class DraftTest {
 
-    // Test drafting a player
+    //Test drafting a player
     @Test
     public void testDraftPlayer() {
         Draft draft = new Draft();
@@ -18,7 +17,7 @@ public class DraftTest {
         assertTrue(roster.contains("Judge"));
     }
 
-    // Test duplicate picks
+    //Test duplicate picks
     @Test
     public void testIsDrafted() {
         Draft draft = new Draft();
@@ -32,7 +31,7 @@ public class DraftTest {
         assertFalse(second);
     }
 
-    // Test occupied roster positions
+    //Test occupied roster positions
     @Test
     public void testRosterSlot() {
         Team team = new Team();
