@@ -16,7 +16,6 @@ public class Player {
 			this.pitcher=false;
 		}
 		
-		
 	}
 	
 	public String getPosition() {
@@ -41,7 +40,5 @@ public class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-
 
 }

@@ -23,3 +23,10 @@ Planned features:
 17. Show available commands and their syntax (help).
 18. Quit the program.
 19. Run the FantasyDraft command prompt/input loop.
+
+First sprint's working commands:
+
+IDRAFT — Drafts a player to Team A.
+ODRAFT — Records a draft pick for Teams A, B, C, or D.
+TEAM — Displays players drafted by a team.
+POVERALL — Displays available pitchers and removes pitchers once drafted.
