@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 First Burndown is https://docs.google.com/spreadsheets/d/1rBK25FKfF8457e3FpxJTjFiR8StWXQDGZ75ayG1NWF8/edit?gid=1060632366#gid=1060632366
 Features document URL: https://docs.google.com/document/d/1b39TDXpGVR0usgtvJ6R5spz4a-E9GDn-mUNotW6qSCk/edit?tab=t.0
 
@@ -23,3 +24,37 @@ Planned semester features:
 17. Show available commands and their syntax (help).
 18. Quit the program.
 19. Run the FantasyDraft command prompt/input loop.
+=======
+First Burndown is https://docs.google.com/spreadsheets/d/1rBK25FKfF8457e3FpxJTjFiR8StWXQDGZ75ayG1NWF8/edit?gid=1060632366#gid=1060632366
+Features document URL: https://docs.google.com/document/d/1b39TDXpGVR0usgtvJ6R5spz4a-E9GDn-mUNotW6qSCk/edit?tab=t.0
+
+Fantasy Baseball Draft - Group 3
+
+Planned features:
+1. List MLB teams.
+2. List players on a team.
+3. Search for a player by name.
+4. Initialize the database from MLB batting and pitching data.
+5. View a fantasy team.
+6. Draft a player (IDRAFT and ODRAFT).
+7. Check duplicate picks.
+8. View player batting and pitching statistics.
+9. Rank undrafted pitchers (POVERALL).
+10. Rank undrafted non-pitchers (OVERALL).
+11. Print/update current draft state.
+12. Sort players by overall score.
+13. Update OVERALL/POVERALL based on evaluation functions (EVALFUN and PEVALFUN).
+14. Serialize the database to support saving and restoring.
+15. Save the current draft.
+16. Restore the draft state from a filename.fantasy.txt file.
+17. Show available commands and their syntax (help).
+18. Quit the program.
+19. Run the FantasyDraft command prompt/input loop.
+
+First sprint's working commands:
+
+IDRAFT — Drafts a player to Team A.
+ODRAFT — Records a draft pick for Teams A, B, C, or D.
+TEAM — Displays players drafted by a team.
+POVERALL — Displays available pitchers and removes pitchers once drafted.
+>>>>>>> origin/sn-sprint1
