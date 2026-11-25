@@ -11,11 +11,12 @@ import org.junit.Test;
 //isPitcher field will be false 
 public class TestPlayer {
 	private Player player;
+	private PlayerStats placeholder;
 	
 	
 	@Before
 	public void setup() {
-		this.player=new Player("P","Placeholder Player");
+		this.player=new Player(placeholder);
 		
 	}
 	@Test
